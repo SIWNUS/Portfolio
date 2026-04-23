@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { AboutSection } from "./components/AboutSection";
 import { CertificationsSection } from "./components/CertificationsSection";
 import { ContactSection } from "./components/ContactSection";
@@ -7,14 +8,20 @@ import { Footer } from "./components/Footer";
 import { HeroSection } from "./components/HeroSection";
 import { Navbar } from "./components/Navbar";
 import { ProjectsSection } from "./components/ProjectsSection";
+import { ResumeSection } from "./components/ResumeSection";
 import { SkillsSection } from "./components/SkillsSection";
 import { navItems } from "./data/portfolio";
 import { useActiveSection } from "./hooks/useActiveSection";
 import { useTheme } from "./hooks/useTheme";
+import { trackPageView } from "./utils/analytics";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
   const activeSection = useActiveSection(navItems.map((item) => item.id));
+
+  useEffect(() => {
+    trackPageView();
+  }, []);
 
   return (
     <div className="min-h-screen bg-canvas text-text">
@@ -29,6 +36,7 @@ function App() {
         <ExperienceSection />
         <FeaturedCaseStudy />
         <ProjectsSection />
+        <ResumeSection />
         <SkillsSection />
         <CertificationsSection />
         <ContactSection />

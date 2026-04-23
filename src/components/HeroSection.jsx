@@ -1,4 +1,5 @@
 import { profile } from "../data/portfolio";
+import { trackEvent } from "../utils/analytics";
 import { Reveal } from "./Reveal";
 
 export function HeroSection() {
@@ -36,6 +37,7 @@ export function HeroSection() {
               href={profile.github}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackEvent("GitHub Click")}
               className="rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-[0.28em] text-onAccent transition hover:bg-secondary"
             >
               GitHub
@@ -44,6 +46,7 @@ export function HeroSection() {
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackEvent("LinkedIn Click")}
               className="rounded-full border border-accent/60 px-6 py-3 text-sm font-bold uppercase tracking-[0.28em] text-accent transition hover:border-secondary hover:text-secondary"
             >
               LinkedIn

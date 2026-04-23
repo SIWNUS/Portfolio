@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { contactLinks, profile } from "../data/portfolio";
+import { trackEvent } from "../utils/analytics";
 import { Reveal } from "./Reveal";
 import { SectionIntro } from "./SectionIntro";
 
@@ -24,6 +25,20 @@ export function ContactSection() {
     setFormData((current) => ({ ...current, [name]: value }));
   };
 
+  const handleContactLinkClick = (label) => {
+    if (label === "GitHub") {
+      trackEvent("GitHub Click");
+      return;
+    }
+
+    if (label === "LinkedIn") {
+      trackEvent("LinkedIn Click");
+      return;
+    }
+
+    trackEvent("Contact Click");
+  };
+
   return (
     <section id="contact" className="section-shell">
       <Reveal>
@@ -42,6 +57,7 @@ export function ContactSection() {
               href={item.href}
               target={item.href.startsWith("http") ? "_blank" : undefined}
               rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+              onClick={() => handleContactLinkClick(item.label)}
               className="block rounded-[1.5rem] border border-border/70 bg-surface/80 p-5 transition hover:-translate-y-1 hover:border-accent/40"
             >
               <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent">
@@ -98,6 +114,7 @@ export function ContactSection() {
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <a
                 href={mailtoHref}
+                onClick={() => trackEvent("Contact Click")}
                 className="rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-[0.24em] text-onAccent transition hover:bg-secondary"
               >
                 Open Email Draft

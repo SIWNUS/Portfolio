@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Portfolio social preview for Suswin Palanisamy">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090909" />
+      <stop offset="100%" stop-color="#111111" />
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#a3b8c4" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1030" cy="120" r="180" fill="#d4af37" fill-opacity="0.08" />
+  <circle cx="180" cy="520" r="220" fill="#a3b8c4" fill-opacity="0.08" />
+  <rect x="88" y="88" width="1024" height="454" rx="28" fill="none" stroke="url(#line)" stroke-opacity="0.35" />
+  <text x="110" y="190" fill="#d4af37" font-family="IBM Plex Mono, monospace" font-size="28" letter-spacing="9">DEVELOPER PORTFOLIO</text>
+  <text x="110" y="290" fill="#f4efe5" font-family="Plus Jakarta Sans, Segoe UI, sans-serif" font-size="72" font-weight="800">Suswin Palanisamy</text>
+  <text x="110" y="368" fill="#a3b8c4" font-family="Plus Jakarta Sans, Segoe UI, sans-serif" font-size="34" font-weight="700">Software Developer | ERP &amp; Backend Systems</text>
+  <text x="110" y="438" fill="#b5b0a4" font-family="Plus Jakarta Sans, Segoe UI, sans-serif" font-size="28">Python, PHP, Django, Linux, MySQL, scalable operational software</text>
+  <rect x="110" y="486" width="350" height="3" rx="1.5" fill="url(#line)" />
+</svg>
