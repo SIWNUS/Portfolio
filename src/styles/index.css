@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --color-canvas: 9 9 9;
+    --color-surface: 17 17 17;
+    --color-surface-alt: 26 26 26;
+    --color-border: 120 101 53;
+    --color-text: 244 239 229;
+    --color-muted: 181 176 164;
+    --color-accent: 212 175 55;
+    --color-on-accent: 9 9 9;
+    --color-accent-soft: 88 70 24;
+    --color-secondary: 163 184 196;
+    --color-secondary-soft: 43 56 67;
+    background-color: rgb(var(--color-canvas));
+  }
+
+  html[data-theme="light"] {
+    color-scheme: light;
+    --color-canvas: 241 245 249;
+    --color-surface: 255 255 255;
+    --color-surface-alt: 229 236 244;
+    --color-border: 146 166 188;
+    --color-text: 25 37 53;
+    --color-muted: 82 101 123;
+    --color-accent: 144 151 161;
+    --color-on-accent: 25 37 53;
+    --color-accent-soft: 203 213 225;
+    --color-secondary: 37 99 235;
+    --color-secondary-soft: 191 219 254;
+    background-color: rgb(var(--color-canvas));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background:
+      linear-gradient(to bottom, rgb(var(--color-canvas)), rgb(var(--color-surface)));
+    color: rgb(var(--color-text));
+    font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  *::selection {
+    background: rgb(var(--color-accent) / 0.2);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 700ms ease,
+      transform 700ms ease;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-visible,
+  * {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
