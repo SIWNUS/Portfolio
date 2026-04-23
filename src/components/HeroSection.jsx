@@ -17,7 +17,7 @@ export function HeroSection() {
             Developer Portfolio
           </p>
           <h1 className="mt-6 text-5xl font-extrabold tracking-tight text-text sm:text-6xl lg:text-7xl">
-            {profile.name}
+            Suswin Palanisamy — Software Developer
           </h1>
           <p className="mt-5 max-w-2xl text-lg font-semibold leading-8 text-secondary md:text-xl">
             {profile.title}

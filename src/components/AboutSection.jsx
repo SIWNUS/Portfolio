@@ -9,7 +9,7 @@ export function AboutSection() {
         <SectionIntro
           eyebrow="About"
           title="Building software close to real operations"
-          description="My work is shaped by environments where software needs to be useful, maintainable, and dependable under real production constraints."
+          description="Suswin Palanisamy works in environments where ERP and backend software must stay useful, maintainable, and dependable under real production constraints."
         />
       </Reveal>
 
