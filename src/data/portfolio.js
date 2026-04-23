@@ -114,7 +114,7 @@ export const certifications = [
 
 export const contactLinks = [
   { label: "Email", value: profile.email, href: `mailto:${profile.email}` },
-  { label: "GitHub", value: "github.com/suswin-z", href: profile.github },
+  { label: "GitHub", value: "github.com/SIWNUS", href: profile.github },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/suswin-palanisamy",
