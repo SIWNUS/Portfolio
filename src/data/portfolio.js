@@ -5,7 +5,7 @@ export const profile = {
   location: "Tamil Nadu, India",
   email: "suswinpalanswamy@gmail.com",
   github: "https://github.com/SIWNUS",
-  linkedin: "https://www.linkedin.com/in/suswin-palanisamy/",
+  linkedin: "https://www.linkedin.com/in/suswin-palaniswamy/",
   summary:
     "Software developer focused on ERP delivery, backend systems, Linux operations, and practical engineering improvements that make production teams more reliable and effective.",
 };
@@ -118,7 +118,7 @@ export const contactLinks = [
   { label: "GitHub", value: "github.com/SIWNUS", href: profile.github },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/suswin-palanisamy",
+    value: "linkedin.com/in/suswin-palaniswamy",
     href: profile.linkedin,
   },
 ];
